@@ -1,67 +1,114 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: whitesmoke;
+    font-family: 'Poppins',sans-serif;
+    background: whitesmoke;
+    overflow-x: hidden;
 }
 
-h1 {
-  font-weight: 700;
-}
-
-h2 {
-  font-weight: 600;
-}
-
-p {
-  font-weight: 400;
-}
-
+/* ---------------- NAV ---------------- */
 .nav {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
     position: relative;
-    flex-direction: row;
-    width: 100%;
-    height: 0 auto;
-    align-items: center;
-    justify-content: space-between;
-    padding: 35px;
+    z-index: 2;
 }
 
-.right-nav button, .hero button {
-    border: none;
-    padding: 15px;
-    border-radius: 20px;
-    margin: 10px;
-    background-color: rgba(49, 133, 252, 0.6);
+.left-nav h1 {
+    font-size: 2rem;
 }
 
-.sign-in:hover, .contact:hover, .booking:hover, .scroller:hover {
-    cursor: pointer;
-}
-
-.hero {
+.right-nav {
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 0 auto;
-    align-items: center;
-    text-align: center;
-    justify-content: space-between;
-    margin: 30px;
+    gap: 1rem;
 }
 
-.hero h1 {
-    font-weight: 450;
+.right-nav button {
+    border: none;
+    border-radius: 18px;
+    padding: .9rem 1.5rem;
+    background: rgba(49,133,252,.6);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.right-nav button:hover {
+    transform: translateY(-2px);
+}
+
+/* ---------------- HERO ---------------- */
+.hero {
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+    text-align: center;
+    padding: 2rem;
+}
+.hero-content h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
 }
 
 .shorter {
-    font-weight: 600;
-    width: 60%;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 3rem;
 }
 
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
 
+.hero-buttons button {
+    border: none;
+    border-radius: 18px;
+    padding: 1rem 2rem;
+    background: rgba(49,133,252,.75);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.hero-buttons button:hover {
+    transform: translateY(-2px);
+}
+
+.problem {
+    min-height: 100vh;
+}
