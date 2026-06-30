@@ -39,7 +39,7 @@ body {
     border: none;
     border-radius: 18px;
     padding: .9rem 1.5rem;
-    background: rgba(49,133,252,.6);
+    background: rgba(49, 133, 252, .6);
     font-family: inherit;
     font-size: 1rem;
     font-weight: 600;
@@ -101,7 +101,7 @@ body {
     border: none;
     border-radius: 18px;
     padding: 1rem 2rem;
-    background: rgba(49,133,252,.75);
+    background: rgba(49, 133, 252, 0.75);
     font-family: inherit;
     font-size: 1rem;
     font-weight: 600;
@@ -113,6 +113,7 @@ body {
     cursor: pointer;
 }
 
+/* ---------------- PROBLEM ---------------- */
 .problem {
     position: relative;
     display: none;
@@ -177,4 +178,102 @@ body {
     object-fit: cover;
     pointer-events: none;
     z-index: 0;
+}
+
+/* ---------------- SOLUTION ---------------- */
+.solution {
+    position: relative;
+    display: none;
+    min-height: 100vh;
+    padding: 6rem 2rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.solution h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.solution > p {
+    max-width: 700px;
+    margin: 0 auto 4rem;
+    line-height: 1.7rem;
+    color: #555;
+}
+
+.solution-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.solution > *:not(.solution-img) {
+    position: relative;
+    z-index: 0;
+}
+
+.solution-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+}
+
+.solution-card {
+    background: linear-gradient(white 80%, rgb(226, 235, 231));
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: 0.25s;
+}
+
+.solution-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.35rem;
+}
+
+.solution-card p {
+    line-height: 1.7;
+    color: rgb(102, 102, 102);
+}
+
+.solution-card:hover {
+    transform: translateY(-6px);
+}
+
+.number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    background: rgba(49, 133, 252, 0.75);
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.book-now {
+    border: none;
+    border-radius: 18px;
+    padding: 1rem 2rem;
+    background: rgba(49, 133, 252, 0.75);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.book-now:hover {
+    transform: translateY(-3px);
 }
